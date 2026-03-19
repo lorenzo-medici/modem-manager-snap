@@ -1,0 +1,28 @@
+From c3854b66c359e724189bdebf1989362a8d9c8abc Mon Sep 17 00:00:00 2001
+From: Lorenzo Medici <lorenzo.medici@canonical.com>
+Date: Wed, 18 Mar 2026 17:40:34 +0200
+Subject: plugin: cinterion: add USB interface number 0x05
+
+Signed-off-by: Lorenzo Medici <lorenzo.medici@canonical.com>
+---
+ src/plugins/cinterion/mm-broadband-bearer-cinterion.c | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+diff --git a/src/plugins/cinterion/mm-broadband-bearer-cinterion.c b/src/plugins/cinterion/mm-broadband-bearer-cinterion.c
+index 85fbf69c..f2825cfe 100644
+--- a/src/plugins/cinterion/mm-broadband-bearer-cinterion.c
++++ b/src/plugins/cinterion/mm-broadband-bearer-cinterion.c
+@@ -59,6 +59,10 @@ static const UsbInterfaceConfig usb_interface_configs[] = {
+         .swwan_index   = 1,
+         .usb_iface_num = 0x08,
+     },
++    {
++        .swwan_index = 1,
++        .usb_iface_num = 0x05,
++    }
+ };
+ 
+ static gint
+-- 
+2.43.0
+
